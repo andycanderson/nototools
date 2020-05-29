@@ -43,6 +43,6 @@ Convert merged fonts to base64 using this tool:
  
 - As a npm module from root level of package.json
 
-        npx gulp --cwd 'directory_to_nototools_pdf_fonts_module' buildFonts
+        npx gulp --cwd 'directory_to_nototools-pdf-fonts_module' buildFonts
 
-Find built files of base64 in `build` directory. 
+Find built files of base64 in `build` directory of nototools-pdf-fonts module. 
