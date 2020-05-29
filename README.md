@@ -8,15 +8,20 @@ In [noto fonts](https://www.google.com/get/noto/) latin characters are separated
 This package provides the tools generate required font data for pdf generator such as [pdfmake](https://github.com/bpampuch/pdfmake) to properly generate characters in latin and the language specified vs only the language specified as otherwise would show as tofu blocks or empty spaces.
 
 ## Instructions
-Clone repository or install or 
+Clone repository locally or install:
+- Locally
     
-    npm install --save-dev nototools-pdf-fonts
+        npm install
+    
+- As npm module
+
+        npm install --save-dev nototools-pdf-fonts && npm install --save-dev gulp && npm install --save-dev gulp-each
 
 On Mac OS X, install dependencies with [homebrew](https://brew.sh)
  
     brew install --with-cairo harfbuzz cairo pango pygtk imagemagick
 
-Install python dependencies,
+Install python dependencies in directory,
 
     pip install -r requirements.txt
 
