@@ -1,11 +1,8 @@
-Fork of [nototools](https://github.com/googlefonts/nototools) 
+**Missing characters in pdfs when you try to display text in Noto Fonts with different languages?**
 
-This is a customization of nototools to convert and merge font files to proper format needed for pdf generators such as [pdfMake](https://github.com/bpampuch/pdfmake).
+This is by design in noto fonts. Noto Tools already provides a way to merge fonts but this package is designed to streamline the process to generate the font files needed for pdfs without dropping characters.
 
-## Description
-In [noto fonts](https://www.google.com/get/noto/) latin characters are separated out from downloadable `.ttf` files for non latin language sets - with the exception of the cjk `.otf` files. 
-
-This package provides the tools generate required font data for pdf generator such as [pdfmake](https://github.com/bpampuch/pdfmake) to properly generate characters in latin and the language specified vs only the language specified as otherwise would show as tofu blocks or empty spaces.
+In [noto fonts](https://www.google.com/get/noto/) latin characters are separated out from downloadable `.ttf` files for non latin language sets. Specifically when using a tool like [pdfmake](https://github.com/bpampuch/pdfmake) we need to merge latin character sets with other languages to properly see latin (including english and number) characters.
 
 ## Instructions
 Clone repository locally or install:
