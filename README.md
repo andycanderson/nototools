@@ -8,7 +8,9 @@ In [noto fonts](https://www.google.com/get/noto/) latin characters are separated
 This package provides the tools generate required font data for pdf generator such as [pdfmake](https://github.com/bpampuch/pdfmake) to properly generate characters in latin and the language specified vs only the language specified as otherwise would show as tofu blocks or empty spaces.
 
 ## Instructions
-Clone repository or install or `npm install nototools-pdf-fonts`
+Clone repository or install or 
+    
+    npm install --save-dev nototools-pdf-fonts
 
 On Mac OS X, install dependencies with [homebrew](https://brew.sh)
  
@@ -18,14 +20,25 @@ Install python dependencies,
 
     pip install -r requirements.txt
 
-Then install nototools.  Since nototools changes frequently, installing using 'editable' mode is recommended:
+Installing using 'editable' mode is recommended:
 
     pip install -e .
 
-Download all fonts [noto fonts](https://www.google.com/get/noto/) to use as source for script (alternatively - modify dicts in `merge_fonts.py` and only include font files as needed).
+Download fonts from [noto fonts](https://www.google.com/get/noto/)
 
-See `merge_fonts.py` for more instructions on usage or use already merged fonts from `merged_fonts` directory. 
+Merge fonts using `merge_fonts.py` - modify as needed(add downloaded font files to merge or skip this step to use already merged fonts provided in merged_fonts directory for the next step): 
+    
+    python3 dir_to_merge_fonts.py -d dir_to_notofonts_to_merge
 
-*note that otf files from CJK (Chinese, Japanese and Korean) cannot be merged and instead should be built either from the default provided fonts in `merged_fonts` directory or [here](https://github.com/m13253/kaigen-fonts) (converted noto sans cjk `.otf` files).
+*note that `.otf` files from CJK (Chinese, Japanese and Korean) cannot be merged and instead should be built directly to base64 using the CJK font files found in the `merged_fonts` directory which has been conveniently provided by [Kaigen Fonts](https://github.com/m13253/kaigen-fonts). Additional font weights can be supplied to this tool from there.*
 
-To convert merged fonts to base64, make sure all merged font files are in `merged_fonts` directory then install node modules and run `gulp buildFonts` and find built files of base64 data in `build` directory. 
+Convert merged fonts to base64 using this tool: 
+- As a cloned repo
+
+        gulp buildFonts 
+ 
+- As a npm module
+
+        gulp --cwd './node_modules/nototools-pdf-fonts
+
+Find built files of base64 in `build` directory. 
