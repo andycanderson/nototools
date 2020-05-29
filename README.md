@@ -12,7 +12,9 @@ Clone repository locally or install:
     
 - As npm module
 
-        npm install --save-dev nototools-pdf-fonts && npm install --save-dev gulp && npm install --save-dev gulp-each
+        npm install --save-dev nototools-pdf-fonts
+
+    - Then run `npm install` within nototools-pdf-fonts module directory
 
 On Mac OS X, install dependencies with [homebrew](https://brew.sh)
  
@@ -37,10 +39,10 @@ Merge fonts using `merge_fonts.py` - modify as needed(add downloaded font files 
 Convert merged fonts to base64 using this tool: 
 - As a cloned repo
 
-        gulp buildFonts 
+        npx gulp buildFonts 
  
-- As a npm module
+- As a npm module from root level of package.json
 
-        gulp --cwd './node_modules/nototools-pdf-fonts
+        npx gulp --cwd 'directory_to_nototools_pdf_fonts_module' buildFonts
 
 Find built files of base64 in `build` directory. 
