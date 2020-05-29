@@ -1,6 +1,6 @@
 {
   "name": "nototools-pdf-fonts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "customization for noto tools to merge non CJK noto fonts with latin character and prepare fonts files to be used by a pdf generator such as pdfMake",
   "main": "gulpfile.js",
   "directories": {
