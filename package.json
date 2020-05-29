@@ -3,12 +3,6 @@
   "version": "1.0.1",
   "description": "customization for noto tools to merge non CJK noto fonts with latin character and prepare fonts files to be used by a pdf generator such as pdfMake",
   "main": "gulpfile.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andycanderson/nototools.git"
@@ -21,6 +15,10 @@
   ],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-each": "^0.5.0"
+  },
   "bugs": {
     "url": "https://github.com/andycanderson/nototools/issues"
   },
